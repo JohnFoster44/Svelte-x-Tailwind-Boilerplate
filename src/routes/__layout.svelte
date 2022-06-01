@@ -3,8 +3,10 @@
     import "../app.css";
     import "../styles.css"
     import Nav from "../components/Nav.svelte";
+    import Footer from "../components/Footer.svelte";
 </script>
 
 <Nav/>
 <!--must include slot for page content -->
 <slot />
+<Footer/>
