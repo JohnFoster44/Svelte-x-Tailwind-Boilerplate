@@ -7,7 +7,7 @@
 
 <nav>
     <div class="navbar">
-        <a href="/" class="font-bold text-green-300 | hover:text-green-200 transition">SpinUp Labs x Svelte/TW</a>
+        <a href="/" class="font-bold text-xl text-green-300 | hover:text-green-200 transition">SpinUp Labs x Svelte/TW</a>
         
         <ul class="hidden lg:flex">
             {#each menu as item}
