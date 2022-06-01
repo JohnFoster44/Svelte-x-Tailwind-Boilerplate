@@ -1,34 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Burger */
+.navbar {
+    @apply p-2 mb-5 bg-blue-600 flex justify-between;
+}
 .burger-container {
-    display: block;
+    @apply block lg:hidden;
 }
 
 .burger {
-    position: relative;
-    height: 26px;
-    width: 32px;
+    @apply relative flex flex-col justify-between w-8 h-6;
     z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .checkbox {
-    display: block;
-    position: absolute;
-    height: 32px;
-    width: 32px;
-    cursor: pointer;
-    z-index: 5;
-    opacity: 0;
+    @apply block absolute cursor-pointer opacity-0 h-8 w-8 z-10;
 }
 
 /* Burger lines */
 .burger .line {
-    display: block;
-    height: 4px;
-    width: 100%;
-    background: #86EFD0;
+    @apply block w-full h-1 bg-green-300;
 }
 
 /* Animation of lines */
@@ -56,4 +49,16 @@
 
 .burger-container .checkbox:checked ~ .burger .line-3 {
     transform: rotate(-45deg);
+}
+
+/* menu slide out */
+
+.menu-items {
+    transition: transform 0.4s ease-in-out;
+    transform: translateX(150%);
+    @apply flex flex-col text-center bg-blue-600 overflow-hidden absolute h-screen w-full py-20 text-5xl lg:hidden
+}
+
+.burger-container .checkbox:checked ~ .menu-items {
+    transform: translateX(-93%);
 }
