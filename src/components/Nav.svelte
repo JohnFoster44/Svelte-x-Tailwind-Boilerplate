@@ -23,11 +23,13 @@
                 <span class="line line-3"></span>
             </div>
             <!-- Mobile menu -->
-            <ul class="menu-items">
-                {#each menu as item}
-                <li class="mx-1 mb-5"><a href={item.url} class="font-bold text-green-300 | hover:underline hover:text-green-200 transition">{item.name}</a></li>
-                {/each}
-            </ul>
+            <div class="menu-items">
+                <ul>
+                    {#each menu as item}
+                    <li class="mx-1 mb-5"><a href={item.url} class="font-bold text-green-300 | hover:underline hover:text-green-200 transition">{item.name}</a></li>
+                    {/each}
+                </ul>
+            </div>
         </div>
     </div>
 </nav>
