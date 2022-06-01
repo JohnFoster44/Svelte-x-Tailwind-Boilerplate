@@ -7,7 +7,7 @@
     @apply py-3 px-4 mb-5 bg-blue-600 flex justify-between items-center;
 }
 .burger-container {
-    @apply block lg:hidden;
+    @apply block lg:hidden relative;
 }
 
 .burger {
